@@ -1,0 +1,33 @@
+:root {
+/*
+	$primary: #3579e9;
+	$secundary: #333;
+	$tertiary: #fff;
+	$success: green;
+	$alert: red;
+	$light: #ccc;
+	$superlight: #fff;
+	$dark: black;
+*/
+
+    --primary-color: #3579e9;
+ --secundary-color: #999;
+
+	--primary-bg-color: #FFF;
+	--primary-bg-color-alpha: rgba(255, 255, 255, 0.7);
+	--second-bg-color: #333;
+ 
+	--tertiary-bg-color:#C9C7CA;
+	--primary: #3c6e71;
+	--secundary: #2F3B49;
+	--tertiary: #7B91A8;
+	
+	--border-color:#ced4da;
+
+	--success: green;
+	--alert: #b94032;
+	--light: #f8f9fa;
+	--superlight: #FFFFFF;
+	--dark: #28394D;
+
+}

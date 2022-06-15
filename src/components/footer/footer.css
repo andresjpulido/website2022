@@ -1,0 +1,61 @@
+@import "../../styles/variables.css";
+
+.footer {
+	background-color: var(--primary-color);
+	color: var(--primary-bg-color-alpha);
+	padding: 6rem;
+}
+
+.footer h5 {
+	color: var(--primary-bg-color);
+}
+
+.footer-copy {
+	text-align: center;
+	padding-top: 3.5rem;
+	font-family: "light";
+	font-size: 1.1rem;
+}
+
+.footer p {
+	color: var(--primary-bg-color-alpha);
+	font-weight: 100;
+	line-height: 2.2rem;
+}
+
+.footer-links ul {
+	font-family: "light";
+	font-size: 1.2rem;
+}
+
+.footer-links li {
+	line-height: 3rem;
+}
+
+.footer a {
+	font-family: "light";
+	font-size: 1.2rem;
+	color: var(--primary-bg-color-alpha);
+}
+
+.footer-columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-columns div {
+	flex: 1 1 0px;
+}
+
+.footer-item-contact svg {
+	font-size: 2rem;
+}
+
+.footer-item-contact {
+	display: flex;
+	padding-top: 1rem;
+}
+
+div.footer-item-contact div:nth-last-child(1) {
+	margin-left: 2rem;
+}

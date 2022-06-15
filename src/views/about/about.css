@@ -1,0 +1,11 @@
+@import "../../styles/variables.css";
+
+.about {
+    padding-bottom: 6rem;
+    margin-left: 6rem;
+}
+
+.about-image {
+	display: flex;
+    align-items:stretch; 
+}

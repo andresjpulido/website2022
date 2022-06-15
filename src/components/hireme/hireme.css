@@ -1,0 +1,29 @@
+@import "../../styles/variables.css";
+
+.hireme {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--primary-bg-color);
+    padding-left: 9rem;
+    padding-right: 11rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "light";
+}
+
+
+.hireme-button {
+    background-color: var(--primary-bg-color);
+    color: var(--second-bg-color);
+    padding: 2rem 3rem;
+    font-size: 1.2rem; 
+    border-radius: .2rem;
+}
+
+.hireme-bold{
+    font-weight: bold;
+    font-family: 'opensansebold';
+}

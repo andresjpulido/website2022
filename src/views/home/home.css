@@ -1,0 +1,94 @@
+@import "../../styles/variables.css";
+
+.home {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+
+.home-name {
+	color: var(--primary-color);
+}
+
+.home-cv {
+	padding: 1.2rem 3.5rem;
+	font-size: 1.2rem;
+	font-family: "light";
+	color: var(--primary-color);
+	background-color: var(--primary-bg-color);
+	border: 0.1rem solid var(--primary-color);
+}
+
+.home-cv:hover {
+	cursor: pointer;
+}
+
+.rightdiv {
+	background-color: var(--primary-color);
+	top: 0px;
+	right: 0px;
+	height: 78vh;
+	width: 40%;
+	position: absolute;
+	z-index: -1;
+}
+
+.centerdiv {
+	background-color: var(--light);
+	height: 70%;
+	width: 60%;
+	position: absolute;
+	z-index: -1;
+	left: 30%;
+}
+
+.leftdiv {
+	background-color: var(--primary-color);
+	 
+	height: 20%;
+	width: 40%;
+	left: 0px;
+	bottom: 0px;
+	position: absolute;
+	z-index: -1;
+}
+
+.home-title {
+	width: 30rem;
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+
+.home-slideset {
+	 
+	display: flex;
+	align-items: center;
+	margin-left: 25%;
+}
+
+.home-slideset > * {
+	visibility: hidden;
+	position: absolute; 
+	animation: 12s autoplay1 infinite;
+	
+}
+
+@keyframes autoplay1 {
+	0% {
+		visibility: visible;
+	}
+	33.33% {
+		visibility: hidden;
+	}
+}
+
+.home-slideset > *:nth-child(1) {
+	animation-delay: 0s;
+}
+.home-slideset > *:nth-child(2) {
+	animation-delay: 4s;
+}
+.home-slideset > *:nth-child(3) {
+	animation-delay: 8s;
+}
