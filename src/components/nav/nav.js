@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
 import logo from "../../assets/images/logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Nav( passive = false) {
- 
-	const [menu, setmenu] = useState([
-		{ id: "home", label: "Home", isActive:true },
-		{ id: "about", label: "About" },
-		{ id: "mywork", label: "Projects" },
-		{ id: "contact", label: "Contact" },
-	]);
+export default function Nav(props, passive = false) {
+	const [menu, setmenu] = useState(props.data);
 
 	const [transform, settransform] = useState(0);
 
@@ -28,7 +23,7 @@ export default function Nav( passive = false) {
         let scrollTop = event.srcElement.body.scrollTop;
         let itemTranslate = Math.min(0, scrollTop / 3 - 60);
     */
- 
+
 		settransform(window.scrollY);
 
 		let aboutTop = 0;
@@ -50,7 +45,11 @@ export default function Nav( passive = false) {
 		let id = 0;
 		let scrollY = parseInt(window.scrollY, 10);
 
-		if (scrollY < aboutTop) id = "home";
+		if (scrollY < aboutTop) {
+			id = "home";
+			document.getElementById("n").classList.remove("nav-filled");
+			//document.getElementById("n").classList.remove("nav-filled");
+		}
 
 		//if (scrollY >= aboutTop - 5 && scrollY < experienceTop) id = 2;
 
@@ -91,24 +90,32 @@ export default function Nav( passive = false) {
 		return (
 			<div className="nav-item" key={index}>
 				<a
-					href={"#"+item.id}
-					className={ item.isActive ? "nav-link-active" : "nav-link"}
+					href={item.ref}
+					className={item.isActive ? "nav-link-active" : "nav-link"}
 					onClick={(e) => {
 						handlerItemMenu(e, item.id);
 					}}
 				>
-					{item.label}
+					<div className="nav-item-label">{item.label}</div>
+					<div className="nav-item-icon">
+						<FontAwesomeIcon
+							icon={[item.iconFamily, item.icon]}
+							key={item.id}
+						/>
+					</div>
 				</a>
 			</div>
 		);
 	});
 
 	return (
-		<div className="nav">
-			<div className="nav-icon">
-				<img className="nav-icon-img" src={logo} alt="ap" />
+		<nav >
+			<div className="nav nav-filled" id="n">
+				<div className="nav-icon">
+					<img className="nav-icon-img" src={logo} alt="ap" />
+				</div>
+				<div className="nav-items">{items}</div>
 			</div>
-			<div className="nav-items">{items}</div> 
-		</div>
+		</nav>
 	);
 }

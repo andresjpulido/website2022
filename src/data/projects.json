@@ -60,5 +60,18 @@
         "image": "puzzle.png",
         "ranking": "L",
         "level":10
+    },
+    {
+        "id": 5,
+        "title": "Website 2020",
+        "description": "Personal website 2020.",
+        "tags": [
+            "HTML",
+            "ReactJS"
+        ],
+        "url": "http://website2020.andresjpulido.com/",
+        "image": "website2020.png",
+        "ranking": "L",
+        "level":10
     }
 ]

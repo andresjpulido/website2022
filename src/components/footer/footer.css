@@ -1,23 +1,25 @@
 @import "../../styles/variables.css";
 
-.footer {
+footer {
 	background-color: var(--primary-color);
 	color: var(--primary-bg-color-alpha);
-	padding: 6rem;
+	padding: 3rem;
 }
 
-.footer h5 {
+h5.footer {
 	color: var(--primary-bg-color);
+	padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .footer-copy {
 	text-align: center;
 	padding-top: 3.5rem;
 	font-family: "light";
-	font-size: 1.1rem;
+	font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
 }
 
-.footer p {
+footer p {
 	color: var(--primary-bg-color-alpha);
 	font-weight: 100;
 	line-height: 2.2rem;
@@ -25,26 +27,34 @@
 
 .footer-links ul {
 	font-family: "light";
-	font-size: 1.2rem;
+	 
 }
 
 .footer-links li {
-	line-height: 3rem;
+	line-height: 3rem; 
+}
+
+.footer-links-text{
+	color: var(--primary-bg-color-alpha);
 }
 
 .footer a {
 	font-family: "light";
-	font-size: 1.2rem;
-	color: var(--primary-bg-color-alpha);
+	 
+	
 }
 
 .footer-columns {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: fit-content;
 }
 
 .footer-columns div {
 	flex: 1 1 0px;
+	min-width: 15rem;
+	 
 }
 
 .footer-item-contact svg {
@@ -54,8 +64,27 @@
 .footer-item-contact {
 	display: flex;
 	padding-top: 1rem;
+	align-items: center;
+	color: var(--primary-bg-color-alpha);
 }
 
 div.footer-item-contact div:nth-last-child(1) {
 	margin-left: 2rem;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.footer-columns {
+		max-width: none;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

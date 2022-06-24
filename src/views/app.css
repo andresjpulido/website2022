@@ -9,12 +9,17 @@ body {
 	font-family: "opensans";
 }
 
+article {
+	z-index: 1; 
+}
+
+
 h1 {
-	color: var(--second-bg-color);
-	font-size: 4rem;
+	color: var(--second-bg-color); 
+	font-size: clamp(2rem, 2vw + 3rem, 4.5rem);
 	font-weight: bold;
 	font-family: "opensansebold";
-	line-height: 5rem;
+ 
 }
 
 h2 {
@@ -49,7 +54,7 @@ h5 {
 	font-size: 1.6rem;
 	font-weight: bolder;
 	font-family: "regular";
-	 
+
 	padding-bottom: 2rem;
 	line-height: 2.7rem;
 }
@@ -60,7 +65,7 @@ p {
 	font-size: 1.2rem;
 	font-family: "light";
 	font-weight: 600;
-	color: var( --secundary-color);
+	color: var(--secundary-color);
 }
 
 input[type="text"],
@@ -93,8 +98,6 @@ input[type="text"] {
 	height: calc(4.25rem + 2px);
 }
 
- 
-
 input[type="submit"] {
 	background-color: var(--primary-color);
 	border: 0rem solid var(--border-color);
@@ -105,17 +108,22 @@ input[type="submit"] {
 	font-family: "light";
 }
 
-input[type="submit"]:hover{
-cursor: pointer;
+input[type="submit"]:hover {
+	cursor: pointer;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
 	border: 0.1rem solid var(--dark);
 }
 
 form {
 	padding: 3.5rem;
 	background-color: var(--light);
+}
+
+.app{
+	position: relative;
 }
 
 .page {

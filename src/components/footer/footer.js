@@ -20,35 +20,30 @@ export default function Footer() {
 	));
 
 	return (
-		<div className="footer">
+		<footer>
 			<div className="footer-columns">
 				<div>
-					<h5>Lets talk about</h5>
-					<p>
-						Far far away, behind the word mountains, far from the countries
-						Vokalia and Consonantia, there live the blind texts.
-					</p>
-				</div>
-				<div>
-					<h5>Links</h5>
+					<h5 className="footer">Links</h5>
 					<ul className="footer-links">
 						<li>
-							<a href="#home">Home</a>
+							<a href="#home">
+								<div className="footer-links-text">Home</div>
+							</a>
 						</li>
 						<li>
-							<a href="#about">About</a>
+							<a href="#about"><div className="footer-links-text">About</div></a>
 						</li>
 						<li>
-							<a href="#mywork">Projects</a>
+							<a href="#mywork"><div className="footer-links-text">Projects</div></a>
 						</li>
 						<li>
-							<a href="#contact">Contact</a>
+							<a href="#contact"><div className="footer-links-text">Contact</div></a>
 						</li>
 					</ul>
 				</div>
 
 				<div>
-					<h5>Contact</h5>
+					<h5 className="footer">Contact</h5>
 					{socialNet}
 				</div>
 			</div>
@@ -56,6 +51,6 @@ export default function Footer() {
 				Copyright ©2022 All rights reserved | Andres Pulido, Auckland, New
 				Zealand
 			</div>
-		</div>
+		</footer>
 	);
 }

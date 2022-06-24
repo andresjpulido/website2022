@@ -8,21 +8,18 @@ import About from "../views/about";
 import Projects from "../views/projects";
 import Contact from "../views/contact";
 import Footer from "../components/footer";
+import menu from "../data/menu.json";
 
 export default function App(passive = false) {
- 
 	return (
-		<div className="App">
-			<Nav />
-
-			<Home id="home" />
-
-			<About id="about"/>
-
-			<Projects id="mywork" />
-
-			<Contact id="contact" />
-
+		<div className="app">
+			<Nav data={menu} />
+			<article>
+				<Home id="home" />
+				<About id="about" />
+				<Projects id="mywork" />
+				<Contact id="contact" />
+			</article>
 			<Footer />
 		</div>
 	);
