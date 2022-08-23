@@ -1,11 +1,30 @@
 @import "../../styles/variables.css";
 
 .about {
-    padding-bottom: 6rem;
-    margin-left: 6rem;
+    
+	padding-bottom: 1rem;
+	margin-left: 1rem;
 }
 
 .about-image {
 	display: flex;
-    align-items:stretch; 
+	align-items: stretch; 
+}
+
+.about-columns {
+	display: flex; 
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+	.about-columns {
+		padding-left: 1rem;
+		padding-right: 1rem;
+        flex-wrap: nowrap;
+	}
+	.about {
+        padding-top: 9rem;
+		padding-bottom: 6rem;
+		margin-left: 6rem;
+	}
 }

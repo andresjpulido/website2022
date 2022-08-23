@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./nav.css";
 import logo from "../../assets/images/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import menuData from "../../data/menu.json";
 
 export default function Nav(props, passive = false) {
-	const [menu, setmenu] = useState(props.data);
-
+	//const [menu, setmenu] = useState(props.data);
+	const [menu, setmenu] = useState(menuData);
 	const [transform, settransform] = useState(0);
 
 	useEffect(() => {
@@ -41,24 +42,32 @@ export default function Nav(props, passive = false) {
 		let contactTop = 0;
 		if (document.getElementById("contact"))
 			contactTop = document.getElementById("contact").offsetTop;
-
+ 
 		let id = 0;
 		let scrollY = parseInt(window.scrollY, 10);
 
 		if (scrollY < aboutTop) {
-			id = "home";
+			id = 1;
 			document.getElementById("n").classList.remove("nav-filled");
-			//document.getElementById("n").classList.remove("nav-filled");
 		}
 
 		//if (scrollY >= aboutTop - 5 && scrollY < experienceTop) id = 2;
 
-		if (scrollY >= aboutTop - 120 && scrollY < myworkTop) id = "about";
+		if (scrollY >= aboutTop - 120 && scrollY < myworkTop){
+			id = 2; 
+			document.getElementById("n").classList.add("nav-filled"); 
+		} 
 
-		if (scrollY >= myworkTop - 120 && scrollY < contactTop) id = "mywork";
+		if (scrollY >= myworkTop - 120 && scrollY < contactTop) {
+			id = 4;
+			document.getElementById("n").classList.add("nav-filled"); 
+		}
 
-		if (scrollY >= contactTop - 120) id = "contact";
-
+		if (scrollY >= contactTop - 120) {
+			id = 5;
+			document.getElementById("n").classList.add("nav-filled"); 
+		}
+  
 		handlerItemMenu(null, id);
 	};
 
@@ -83,7 +92,7 @@ export default function Nav(props, passive = false) {
 			}
 		});
 
-		setmenu(newList);
+		setmenu(newList); 
 	};
 
 	const items = menu.map((item, index) => {
@@ -110,7 +119,7 @@ export default function Nav(props, passive = false) {
 
 	return (
 		<nav >
-			<div className="nav nav-filled" id="n">
+			<div className="nav " id="n">
 				<div className="nav-icon">
 					<img className="nav-icon-img" src={logo} alt="ap" />
 				</div>

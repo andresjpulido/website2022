@@ -75,7 +75,7 @@
 	text-align: left;
 	display: flex;
 	align-items: center;
-	margin-right: 5rem;
+	margin-left: 1rem; 
 }
 
 .home-slideset {
@@ -85,18 +85,19 @@
 }
 
 .home-slideset > * {
-	visibility: hidden;
+	opacity: 0;
 	position: absolute;
-	animation: 8s autoplay1 infinite;
+	animation: 8s fadeIn infinite;
+	-webkit-animation:8s fadeIn infinite;
+	-moz-animation:8s fadeIn infinite;
+	-o-animation:8s fadeIn infinite;
+	-ms-animation:8s fadeIn infinite;
 }
 
-@keyframes autoplay1 {
-	0% {
-		visibility: visible;
-	}
-	50% {
-		visibility: hidden;
-	}
+@keyframes fadeIn {
+	0% { opacity: 1; }
+	30% { opacity: 1; }
+  60% { opacity: 0; }
 }
 
 .home-slideset > *:nth-child(1) {

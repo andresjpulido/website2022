@@ -4,8 +4,8 @@
     display: flex;
     background-color: var(--primary-color);
     color: var(--primary-bg-color);
-    padding-left: 9rem;
-    padding-right: 11rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 6rem;
     padding-bottom: 6rem;
     justify-content: space-between;
@@ -26,4 +26,11 @@
 .hireme-bold{
     font-weight: bold;
     font-family: 'opensansebold';
+}
+
+@media only screen and (min-width: 600px) {
+	.hireme{
+        padding-left: 9rem;
+        padding-right: 11rem;
+    }
 }

@@ -17,6 +17,7 @@ export default function App(passive = false) {
 			<article>
 				<Home id="home" />
 				<About id="about" />
+				<section id="experience" />
 				<Projects id="mywork" />
 				<Contact id="contact" />
 			</article>

@@ -9,7 +9,7 @@ nav {
 }
 
 .nav-filled {
-	background-color: aqua;
+	background-color: var(--primary-bg-color);
 	box-shadow: 0px 3px 8px var(--border-color);
 }
 
@@ -66,6 +66,12 @@ nav {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+	.nav {
+		padding: 1rem;
+	}
+	.nav-item {
+		margin-left: 2rem;
+	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -83,7 +89,6 @@ nav {
 	.nav {
 		position: fixed;
 		top: 0;
-		background-color: var(--primary-bg-color);
 	}
 }
 

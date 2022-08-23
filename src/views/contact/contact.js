@@ -1,6 +1,8 @@
+import "./contact.css";
+
 export default function Contact(props) {
 	return (
-		<section id={props.id} className="page">
+		<section id={props.id} className="contact">
 			<h3>CONTACT</h3>
 			<h2>Contact Me</h2>
 			<p>

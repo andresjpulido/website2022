@@ -40,7 +40,7 @@ export default function Projects(props) {
 		});
 
 	return (
-		<section id={props.id} className="page projects">
+		<section id={props.id} className="projects">
 			<h3>ACCOMPLISHMENTS</h3>
 			<h2>My Projects</h2>
 			<p>

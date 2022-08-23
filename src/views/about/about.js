@@ -5,7 +5,7 @@ import img from "../../assets/images/abstract-tech-background.jpg";
 export default function About(props) {
 	return (
 		<section id={props.id} >
-			<div className="page columns">
+			<div className="about-columns">
 				<div className="about-image">
 					<img src={img} />
 				</div>

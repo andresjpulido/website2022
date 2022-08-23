@@ -12,9 +12,9 @@
             "Boostrap"
         ],
         "url": "https://github.com/andresjpulido/shop",
-        "image": "shop.png", 
+        "image": "shop.png",
         "ranking": "H",
-        "level":1
+        "level": 1
     },
     {
         "id": 2,
@@ -30,7 +30,7 @@
         "image": "pocket-astronomy.jpg",
         "website": "https://nasa.andresjpulido.com/",
         "ranking": "L",
-        "level":3
+        "level": 3
     },
     {
         "id": 3,
@@ -45,7 +45,7 @@
         "url": "https://github.com/andresjpulido/recipes",
         "image": "recipes.png",
         "ranking": "L",
-        "level":9
+        "level": 9
     },
     {
         "id": 4,
@@ -59,7 +59,7 @@
         "url": "https://github.com/andresjpulido/puzzle",
         "image": "puzzle.png",
         "ranking": "L",
-        "level":10
+        "level": 10
     },
     {
         "id": 5,
@@ -71,7 +71,37 @@
         ],
         "url": "http://website2020.andresjpulido.com/",
         "image": "website2020.png",
+        "website": "https://website2020.andresjpulido.com/",
         "ranking": "L",
-        "level":10
+        "level": 10
+    },
+    {
+        "id": 6,
+        "title": "Website 2021",
+        "description": "Personal website 2021.",
+        "tags": [
+            "HTML",
+            "ReactJS"
+        ],
+        "url": "http://website2021.andresjpulido.com/",
+        "image": "website2021.png",
+        "website": "https://website2021.andresjpulido.com/",
+        "ranking": "L",
+        "level": 10
+    },
+    {
+        "id": 7,
+        "title": "Harmonies",
+        "description": "App musical learning.",
+        "tags": [
+            "HTML",
+            "ReactJS",
+            "redux"
+        ],
+        "url": "http://harmonies.andresjpulido.com/",
+        "image": "harmonies.png",
+        "website": "https://harmonies.andresjpulido.com/",
+        "ranking": "L",
+        "level": 10
     }
 ]
