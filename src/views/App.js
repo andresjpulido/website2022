@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import logo from "../assets/images/logo.svg";
 import "./reset.css";
 import "./app.css";
 import Nav from "../components/nav";
@@ -17,8 +15,8 @@ export default function App(passive = false) {
 			<article>
 				<Home id="home" />
 				<About id="about" />
-				<section id="experience" />
-				<Projects id="mywork" />
+				 
+				<Projects id="portfolio" />
 				<Contact id="contact" />
 			</article>
 			<Footer />

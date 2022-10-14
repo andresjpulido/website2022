@@ -7,7 +7,7 @@ export default function About(props) {
 		<section id={props.id} >
 			<div className="about-columns">
 				<div className="about-image">
-					<img src={img} />
+					<img src={img}  alt="abstract-tech-background" />
 				</div>
 				<div className="about">
 					<h3>WELCOME</h3>

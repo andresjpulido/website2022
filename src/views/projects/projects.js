@@ -42,11 +42,13 @@ export default function Projects(props) {
 	return (
 		<section id={props.id} className="projects">
 			<h3>ACCOMPLISHMENTS</h3>
-			<h2>My Projects</h2>
+			<h2>Portfolio</h2>
 			<p>
 				Far far away, behind the word mountains, far from the countries Vokalia
 				and Consonantia
 			</p>
+			<div>projects</div>
+			<h2>Other projects</h2>
 			<div className="projectlist">{projects}</div>
 		</section>
 	);

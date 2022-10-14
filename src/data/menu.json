@@ -15,20 +15,13 @@
     },
     {
         "id": 3,
-        "label": "Experience",
+        "label": "Portfolio",
         "isActive": false,
         "icon": "globe",
-        "ref": "#experience"
+        "ref": "#portfolio"
     },
     {
         "id": 4,
-        "label": "My Work",
-        "isActive": false,
-        "icon": "sd-card",
-        "ref": "#mywork"
-    },
-    {
-        "id": 5,
         "label": "Contact",
         "isActive": false,
         "icon": "address-book",

@@ -1,7 +1,11 @@
 import "./home.css";
-import logo from "../../assets/images/logo.svg";
 
 export default function Home() {
+
+	let goContact = (ev) => {
+		ev.preventDefault();
+	}
+
 	return (
 		<section id="home" className="home">
 			<div className="home-slideset">
@@ -16,7 +20,7 @@ export default function Home() {
 							<br />
 							<br />
 
-							<a href="#" target="_blank" className="home-cv">
+							<a href={"#contact"} className="home-cv">
 								Contact me
 							</a>
 						</div>
@@ -30,7 +34,7 @@ export default function Home() {
 							<br />
 							<br />
 							<br />
-							<a href="#" target="_blank" className="home-cv">
+							<a href={"#contact"} className="home-cv">
 								Contact me
 							</a>
 						</div>

@@ -8,6 +8,7 @@ export default function Nav(props, passive = false) {
 	//const [menu, setmenu] = useState(props.data);
 	const [menu, setmenu] = useState(menuData);
 	const [transform, settransform] = useState(0);
+	const [ currentSection, setCurrentSection ] = useState(1);
 
 	useEffect(() => {
 		// initiate the event handler
@@ -31,14 +32,10 @@ export default function Nav(props, passive = false) {
 		if (document.getElementById("about"))
 			aboutTop = document.getElementById("about").offsetTop;
 
-		let experienceTop = 0;
-		if (document.getElementById("experience"))
-			experienceTop = document.getElementById("experience").offsetTop;
-
-		let myworkTop = 0;
-		if (document.getElementById("mywork"))
-			myworkTop = document.getElementById("mywork").offsetTop;
-
+		let portfolioTop = 0;
+		if (document.getElementById("portfolio"))
+		portfolioTop = document.getElementById("portfolio").offsetTop;
+ 	 
 		let contactTop = 0;
 		if (document.getElementById("contact"))
 			contactTop = document.getElementById("contact").offsetTop;
@@ -53,22 +50,34 @@ export default function Nav(props, passive = false) {
 
 		//if (scrollY >= aboutTop - 5 && scrollY < experienceTop) id = 2;
 
-		if (scrollY >= aboutTop - 120 && scrollY < myworkTop){
+		if (scrollY >= aboutTop - 120 && scrollY < portfolioTop){
 			id = 2; 
 			document.getElementById("n").classList.add("nav-filled"); 
 		} 
 
-		if (scrollY >= myworkTop - 120 && scrollY < contactTop) {
-			id = 4;
+		if (scrollY >= portfolioTop - 120 && scrollY < contactTop) {
+			id = 3;
 			document.getElementById("n").classList.add("nav-filled"); 
 		}
 
 		if (scrollY >= contactTop - 120) {
-			id = 5;
+			id = 4;
 			document.getElementById("n").classList.add("nav-filled"); 
 		}
   
 		handlerItemMenu(null, id);
+
+		console.log("id::", id, " currentSection ", currentSection)
+
+		if(currentSection !== id){
+			console.log("llamando", id)
+			
+			document.getElementById("logo").className=  ("nav-icon-img"); 
+			
+			setCurrentSection(id);
+		} else{
+			//document.getElementById("logo").className("nav-icon-img");
+		}
 	};
 
 	const handlerItemMenu = (e, id) => {
@@ -87,7 +96,7 @@ export default function Nav(props, passive = false) {
 					...item,
 					isActive: false,
 				};
-
+				
 				return updatedItem;
 			}
 		});
@@ -121,7 +130,7 @@ export default function Nav(props, passive = false) {
 		<nav >
 			<div className="nav " id="n">
 				<div className="nav-icon">
-					<img className="nav-icon-img" src={logo} alt="ap" />
+					<img className="nav-icon-img" id="logo" src={logo} alt="ap" key={currentSection} />
 				</div>
 				<div className="nav-items">{items}</div>
 			</div>
